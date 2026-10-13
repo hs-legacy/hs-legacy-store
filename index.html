@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171614">
+<meta name="description" content="HS LEGACY — Fashion, Beauty & Lifestyle. Made for a better you. Shop online in Pakistan with Cash on Delivery.">
+<title>HS LEGACY | Made for a Better You</title>
+<style>
+:root{--ink:#171614;--cream:#f7f2e9;--paper:#fffdf8;--gold:#b99a5b;--muted:#776f63;--line:#e5dccd;--green:#246b4b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.topbar{background:var(--ink);color:#f8f2e7;text-align:center;padding:9px 12px;font-size:11px;letter-spacing:1.3px}
+header{position:sticky;top:0;z-index:5;background:rgba(255,253,248,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.nav{max-width:1180px;margin:auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-family:Georgia,serif;font-weight:bold;letter-spacing:3px;font-size:23px}.brand small{display:block;font:9px Arial,sans-serif;letter-spacing:2px;color:var(--gold);margin-top:4px}
+.navlinks{display:flex;gap:18px;font-size:12px;color:#554e43}.navlinks a:hover{color:var(--gold)}
+.hero{max-width:1180px;margin:22px auto 0;padding:0 18px}
+.hero-inner{min-height:370px;background:var(--ink);color:var(--cream);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr}
+.hero-copy{padding:clamp(28px,6vw,72px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+h1{font:normal clamp(34px,5vw,62px)/1.05 Georgia,serif;margin:18px 0 12px;letter-spacing:-1px}
+.hero p{line-height:1.7;color:#d5cdbf;max-width:390px;font-size:14px}
+.btn{border:0;display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;background:var(--gold);color:#171614;font-size:12px;font-weight:bold;letter-spacing:.5px;cursor:pointer;border-radius:2px}
+.btn.dark{background:var(--ink);color:var(--cream)}.btn.outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.hero-art{display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(ellipse at 50% 44%,#6b5940 0,#30291f 40%,#1a1916 74%)}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid rgba(209,177,111,.4);border-radius:50%;width:260px;height:260px}
+.hero-art:after{width:310px;height:310px}
+.monogram{z-index:1;font:normal clamp(90px,14vw,170px) Georgia,serif;color:#e4cf9d;letter-spacing:-12px;text-shadow:0 8px 32px #000}
+.section{max-width:1180px;margin:50px auto;padding:0 18px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}
+.kicker{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}.section h2{font:normal 32px Georgia,serif;margin:7px 0 0}
+.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.category{background:var(--paper);border:1px solid var(--line);padding:18px 10px;text-align:center;cursor:pointer;transition:.2s}
+.category:hover,.category.active{border-color:var(--gold);background:#f1e7d5}.category .symbol{font-size:24px;display:block;margin-bottom:12px}.category span:last-child{font-size:11px;line-height:1.4}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{background:var(--paper);border:1px solid var(--line);padding:12px;color:var(--ink);border-radius:2px}.toolbar input{flex:1;min-width:160px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.product{background:var(--paper);border:1px solid var(--line);min-width:0}
+.product-img{aspect-ratio:4/4.6;background:linear-gradient(145deg,#e7dcc8,#f9f5ed);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;display:block}
+.product-placeholder{text-align:center;padding:15px;color:#7b6a4b;font:normal 22px Georgia,serif;letter-spacing:1px}
+.product-placeholder small{display:block;font:9px Arial,sans-serif;letter-spacing:2px;margin-top:8px}
+.product-info{padding:14px}.tag{font-size:9px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase}.product h3{font-size:14px;font-weight:500;margin:8px 0;line-height:1.35}.price{font-weight:bold;font-size:15px}.product-info p{font-size:11px;line-height:1.5;color:var(--muted);min-height:32px}.product-actions{display:flex;gap:7px;margin-top:12px}.product-actions button{flex:1;padding:10px 5px;font-size:10px}
+.info-strip{background:#eae0cf;padding:25px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px;text-align:center}.info-strip strong{font:normal 18px Georgia,serif;display:block;margin-bottom:6px}.info-strip span{font-size:11px;color:#6e6252}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.about-card{background:var(--paper);border:1px solid var(--line);padding:28px}.about h2{font:normal 32px Georgia,serif}.about p{font-size:13px;line-height:1.8;color:var(--muted)}
+footer{background:var(--ink);color:var(--cream);padding:34px 18px;margin-top:45px}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-inner p{font-size:12px;color:#c9c0b1;line-height:1.7}.footer-links{display:flex;gap:14px;flex-wrap:wrap;font-size:12px}
+.whatsapp-float{position:fixed;right:16px;bottom:16px;z-index:6;border-radius:28px;background:var(--green);color:white;padding:14px 17px;font-size:12px;font-weight:bold;box-shadow:0 6px 20px #0002}
+.modal{position:fixed;inset:0;z-index:10;background:#0009;display:none;align-items:center;justify-content:center;padding:14px}.modal.open{display:flex}.modal-box{background:var(--paper);width:min(520px,100%);max-height:90vh;overflow:auto;padding:22px;border:1px solid var(--gold)}.modal-top{display:flex;justify-content:space-between;align-items:center}.modal-top h2{font:normal 25px Georgia,serif;margin:0 0 15px}.close{border:0;background:none;font-size:25px;cursor:pointer}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.form-grid label{font-size:11px;color:var(--muted);display:block;margin-bottom:5px}.form-grid input,.form-grid textarea,.form-grid select{width:100%;padding:11px;border:1px solid var(--line);background:white;border-radius:2px}.form-grid .full{grid-column:1/-1}.note{font-size:11px;color:var(--muted);line-height:1.6}.empty{grid-column:1/-1;padding:30px;text-align:center;color:var(--muted);background:var(--paper)}
+@media(max-width:800px){.navlinks{gap:10px}.navlinks a:nth-child(2),.navlinks a:nth-child(3){display:none}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:35px 26px}.hero-art{min-height:200px}.hero-art:before{width:180px;height:180px}.hero-art:after{width:220px;height:220px}.monogram{font-size:100px}.categories{grid-template-columns:repeat(3,1fr)}.products{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.section{margin:38px auto}}
+@media(max-width:390px){.brand{font-size:19px}.nav{padding:12px}.categories{gap:6px}.category{padding:13px 5px}.product-info{padding:10px}.product-actions{flex-direction:column}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="topbar">A MORE THOUGHTFUL WAY TO SHOP · PAKISTAN-WIDE COD</div>
+<header><nav class="nav">
+<a class="brand" href="#" aria-label="HS LEGACY home">HS LEGACY<small>MADE FOR A BETTER YOU</small></a>
+<div class="navlinks"><a href="#categories">Categories</a><a href="#products">Shop All</a><a href="#about">Our Story</a></div>
+<a class="btn dark" href="#products">SHOP NOW</a>
+</nav></header>
+<main>
+<section class="hero"><div class="hero-inner">
+<div class="hero-copy"><span class="eyebrow">FASHION · BEAUTY · LIFESTYLE</span><h1>Made for<br>a better you.</h1><p>Discover thoughtfully selected styles and everyday essentials, brought to you by HS LEGACY.</p><a class="btn" href="#products">EXPLORE THE COLLECTION</a></div>
+<div class="hero-art" aria-label="HS Legacy monogram artwork"><div class="monogram">HS</div></div>
+</div></section>
+<section class="section" id="categories"><div class="section-head"><div><span class="kicker">Explore your style</span><h2>Shop by category</h2></div></div>
+<div class="categories" id="category-list">
+<button class="category active" onclick="filterCategory('All')"><span class="symbol">⌂</span><span>Shop All</span></button>
+<button class="category" onclick="filterCategory('Ladies Fashion')"><span class="symbol">✦</span><span>Ladies Fashion</span></button>
+<button class="category" onclick="filterCategory('Gents Fashion')"><span class="symbol">◇</span><span>Gents Fashion</span></button>
+<button class="category" onclick="filterCategory('Kids Collection')"><span class="symbol">☆</span><span>Kids Collection</span></button>
+<button class="category" onclick="filterCategory('Beauty & Lifestyle')"><span class="symbol">❋</span><span>Beauty & Lifestyle</span></button>
+<button class="category" onclick="filterCategory('Bags & Clutches')"><span class="symbol">▱</span><span>Bags & Clutches</span></button>
+<button class="category" onclick="filterCategory('Watches & Jewellery')"><span class="symbol">◈</span><span>Watches & Jewellery</span></button>
+<button class="category" onclick="filterCategory('Shawls & Winter Wear')"><span class="symbol">❄</span><span>Shawls & Winter Wear</span></button>
+<button class="category" onclick="filterCategory('Home & Everyday Essentials')"><span class="symbol">⌂</span><span>Home & Everyday Essentials</span></button>
+<button class="category" onclick="filterCategory('New Arrivals')"><span class="symbol">✧</span><span>New Arrivals</span></button>
+</div><p class="note" style="margin-top:14px">Browse clothing, bags, shawls, watches, jewellery, beauty finds and everyday essentials. Only currently listed products are shown. Stock, final price and delivery charges are confirmed on WhatsApp before dispatch.</p></section>
+<section class="section" id="products"><div class="section-head"><div><span class="kicker">Curated for you</span><h2>Our collection</h2></div><span class="note" id="count"></span></div>
+<div class="toolbar"><input id="search" type="search" placeholder="Search products..." aria-label="Search products"><select id="sort" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+<div class="products" id="product-list"></div></section>
+<div class="info-strip"><div><strong>Cash on Delivery</strong><span>Pay when your parcel arrives</span></div><div><strong>Personal Service</strong><span>Order support through WhatsApp</span></div><div><strong>Curated Finds</strong><span>Fashion, beauty and lifestyle</span></div></div>
+<section class="section about" id="about"><div><span class="kicker">The HS LEGACY standard</span><h2>Everyday style.<br>Thoughtfully chosen.</h2><p>HS LEGACY brings together fashion, beauty and lifestyle finds with a focus on a polished look and a smooth shopping experience. We want every order to feel simple, personal and made for you.</p><a class="btn dark" href="#products">FIND YOUR NEXT FAVOURITE</a></div><div class="about-card"><span class="kicker">Shopping with confidence</span><h2>Need a little help?</h2><p>Ask us about product details, available colours, sizing, delivery and COD before placing your order. We will confirm your order on WhatsApp.</p><button class="btn" onclick="openGeneralWhatsApp()">CHAT WITH US</button></div></section>
+</main>
+<footer><div class="footer-inner"><div><div class="brand">HS LEGACY<small>MADE FOR A BETTER YOU</small></div><p>Fashion · Beauty · Lifestyle<br>Online shopping in Pakistan</p></div><div><strong>Customer care</strong><p>Product questions and order confirmation via WhatsApp.</p><div class="footer-links"><a href="#categories">Categories</a><a href="#products">Shop all</a><a href="#" onclick="openGeneralWhatsApp();return false">WhatsApp us</a></div></div><div><p>© <span id="year"></span> HS LEGACY. All rights reserved.</p><p class="note">Product images, prices and availability should be verified before publishing.</p></div></div></footer>
+<a class="whatsapp-float" href="#" onclick="openGeneralWhatsApp();return false">WhatsApp us ↗</a>
+<div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title"><div class="modal-box">
+<div class="modal-top"><h2 id="order-title">Place your order</h2><button class="close" onclick="closeOrder()" aria-label="Close">×</button></div>
+<p id="selected-product" class="note"></p>
+<form id="order-form"><div class="form-grid">
+<div><label for="customer-name">Full name *</label><input id="customer-name" required autocomplete="name" placeholder="Your name"></div>
+<div><label for="customer-phone">Phone number *</label><input id="customer-phone" required inputmode="tel" autocomplete="tel" placeholder="03XXXXXXXXX"></div>
+<div class="full"><label for="customer-address">Complete delivery address *</label><textarea id="customer-address" required rows="2" placeholder="House, street, area, city"></textarea></div>
+<div><label for="customer-city">City *</label><input id="customer-city" required placeholder="Your city"></div>
+<div><label for="customer-qty">Quantity</label><select id="customer-qty"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+<div class="full"><label for="customer-notes">Colour / size / other details</label><input id="customer-notes" placeholder="Optional"></div>
+<div class="full"><label>Payment</label><input value="Cash on Delivery (COD) — confirm availability on WhatsApp" readonly></div>
+<div class="full"><button class="btn" type="submit" style="width:100%">SEND ORDER ON WHATSAPP</button></div>
+</div></form><p class="note">Your WhatsApp app will open with your order details. The order is not submitted until you press Send in WhatsApp. Delivery charges and stock will be confirmed by the store.</p>
+</div></div>
+<script>
+/* STORE SETTINGS: update WhatsApp number and products in this file. Use country code without + or spaces. */
+const WHATSAPP_NUMBER = "923426062538";
+const CATEGORIES = [
+ {name:"Ladies Fashion",symbol:"✦"},
+ {name:"Gents Fashion",symbol:"◇"},
+ {name:"Kids Collection",symbol:"☆"},
+ {name:"Beauty & Lifestyle",symbol:"❋"},
+ {name:"Bags & Clutches",symbol:"▱"},
+ {name:"Watches & Jewellery",symbol:"◈"},
+ {name:"Shawls & Winter Wear",symbol:"❄"},
+ {name:"Home & Everyday Essentials",symbol:"⌂"},
+ {name:"New Arrivals",symbol:"✧"}
+];
+/* Only products grounded in the store details are listed. Confirm stock and any unconfirmed price before dispatch. */
+const PRODUCTS = [
+ {id:"velvet-shawl",name:"Embroidered Velvet Shawl",category:"Shawls & Winter Wear",price:3299,description:"ZS Collection · Premium embroidered velvet. Black and mehroon; 80 × 35 inches. Confirm stock before ordering.",image:"",label:"Featured"},
+ {id:"hand-clutch",name:"Premium Hand Clutch with Handle",category:"Bags & Clutches",price:0,description:"Price and available colours are confirmed personally on WhatsApp before you order.",image:"",label:"New arrival"}
+];
+let activeCategory="All", selectedProduct=null;
+const money=n=>n>0?"Rs. "+Number(n).toLocaleString("en-PK"):"Price to be confirmed";
+function renderCategories(){
+ const el=document.getElementById("category-list");
+ el.innerHTML=`<button class="category ${activeCategory==="All"?"active":""}" onclick="filterCategory('All')"><span class="symbol">⌂</span><span>Shop All</span></button>`+CATEGORIES.map(c=>`<button class="category ${activeCategory===c.name?"active":""}" onclick="filterCategory('${c.name.replace(/'/g,"\\'")}')"><span class="symbol">${c.symbol}</span><span>${c.name}</span></button>`).join("");
+}
+function renderProducts(){
+ const query=document.getElementById("search").value.toLowerCase().trim(), sort=document.getElementById("sort").value;
+ let items=PRODUCTS.filter(p=>(activeCategory==="All"||p.category===activeCategory||activeCategory==="New Arrivals"&&p.label.toLowerCase().includes("new"))&&(`${p.name} ${p.category} ${p.description}`.toLowerCase().includes(query)));
+ if(sort==="low")items.sort((a,b)=>(a.price||Infinity)-(b.price||Infinity)); if(sort==="high")items.sort((a,b)=>(b.price||0)-(a.price||0));
+ document.getElementById("count").textContent=items.length+" items";
+ document.getElementById("product-list").innerHTML=items.length?items.map(p=>`<article class="product"><div class="product-img">${p.image?`<img src="${p.image}" alt="${p.name}" loading="lazy">`:`<div class="product-placeholder">HS LEGACY<small>${p.category.toUpperCase()}</small></div>`}</div><div class="product-info"><div class="tag">${p.label}</div><h3>${p.name}</h3><div class="price">${money(p.price)}</div><p>${p.description}</p><div class="product-actions"><button class="btn dark" onclick="startOrder('${p.id}')">ORDER NOW</button><button class="btn outline" onclick="askAbout('${p.id}')">ASK DETAILS</button></div></div></article>`).join(""):`<div class="empty">No products found. Try another search or category.</div>`;
+}
+function filterCategory(c){activeCategory=c;renderCategories();renderProducts();document.getElementById("products").scrollIntoView({behavior:"smooth"});}
+function openGeneralWhatsApp(){const msg="Assalam-o-Alaikum HS LEGACY! I would like to ask about your products and COD delivery.";window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank");}
+function askAbout(id){const p=PRODUCTS.find(x=>x.id===id);const msg=`Assalam-o-Alaikum HS LEGACY! I would like details about: ${p.name}. Please confirm price, availability, colours/sizes and delivery charges.`;window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank");}
+function startOrder(id){selectedProduct=PRODUCTS.find(x=>x.id===id);document.getElementById("selected-product").textContent=selectedProduct.name+" — "+money(selectedProduct.price)+". Delivery charges will be confirmed on WhatsApp.";document.getElementById("order-modal").classList.add("open");}
+function closeOrder(){document.getElementById("order-modal").classList.remove("open");}
+document.getElementById("order-form").addEventListener("submit",function(e){e.preventDefault();if(!selectedProduct)return;const qty=Number(document.getElementById("customer-qty").value);const total=selectedProduct.price>0?selectedProduct.price*qty:null;const lines=[
+"ASSALAM-O-ALAIKUM HS LEGACY — I WANT TO PLACE A COD ORDER",
+"Product: "+selectedProduct.name,
+"Unit price: "+money(selectedProduct.price),
+"Quantity: "+qty,
+"Product subtotal: "+(total!==null?money(total):"Please confirm"),
+"Customer name: "+document.getElementById("customer-name").value.trim(),
+"Phone: "+document.getElementById("customer-phone").value.trim(),
+"Address: "+document.getElementById("customer-address").value.trim(),
+"City: "+document.getElementById("customer-city").value.trim(),
+"Size/colour/notes: "+(document.getElementById("customer-notes").value.trim()||"Not specified"),
+"Payment: Cash on Delivery (subject to confirmation)",
+"Please confirm stock, delivery charges and final total before dispatch."
+];window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(lines.join("\n")),"_blank");closeOrder();});
+document.getElementById("search").addEventListener("input",renderProducts);document.getElementById("sort").addEventListener("change",renderProducts);
+document.getElementById("order-modal").addEventListener("click",e=>{if(e.target.id==="order-modal")closeOrder()});
+document.getElementById("year").textContent=new Date().getFullYear();renderCategories();renderProducts();
+</script>
+</body></html>
